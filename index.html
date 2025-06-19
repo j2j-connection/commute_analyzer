@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Analysis - Commute Score</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 Traffic Analysis</h1>
+            <p>Get your commute traffic volume and bikability scores</p>
+        </header>
+
+        <main>
+            <form id="commuteForm" class="form">
+                <div class="form-group">
+                    <label for="startAddress">Starting Address</label>
+                    <input 
+                        type="text" 
+                        id="startAddress" 
+                        name="startAddress" 
+                        placeholder="Enter your starting address"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="endAddress">Destination Address</label>
+                    <input 
+                        type="text" 
+                        id="endAddress" 
+                        name="endAddress" 
+                        placeholder="Enter your destination address"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Analyze Commute</span>
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;"></div>
+                </button>
+            </form>
+
+            <div id="results" class="results" style="display: none;">
+                <h2>Your Commute Analysis</h2>
+                
+                <div class="score-cards">
+                    <div class="score-card traffic">
+                        <div class="score-icon">🚦</div>
+                        <h3>Traffic Volume Score</h3>
+                        <div class="score" id="trafficScore">-</div>
+                        <div class="score-label" id="trafficLabel">-</div>
+                        <div class="score-description" id="trafficDescription">-</div>
+                    </div>
+
+                    <div class="score-card bike">
+                        <div class="score-icon">🚴</div>
+                        <h3>Bikability Score</h3>
+                        <div class="score" id="bikeScore">-</div>
+                        <div class="score-label" id="bikeLabel">-</div>
+                        <div class="score-description" id="bikeDescription">-</div>
+                    </div>
+                </div>
+
+                <!-- New Score Breakdown Section -->
+                <div class="score-breakdown">
+                    <h3>📊 Score Breakdown</h3>
+                    <div class="breakdown-grid">
+                        <div class="breakdown-card traffic-breakdown">
+                            <h4>🚦 Traffic Score Factors</h4>
+                            <div class="factor-list" id="trafficFactors">
+                                <!-- Factors will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="breakdown-card bike-breakdown">
+                            <h4>🚴 Bike Score Factors</h4>
+                            <div class="factor-list" id="bikeFactors">
+                                <!-- Factors will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recommendation" id="recommendation">
+                    <h3>Recommendation</h3>
+                    <p id="recommendationText">-</p>
+                </div>
+
+                <button id="newAnalysis" class="new-analysis-btn">Analyze Another Route</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Load configuration first -->
+    <script src="config.js"></script>
+    
+    <!-- Load API services -->
+    <script src="services/api.js"></script>
+    <script src="services/scoring.js"></script>
+    
+    <!-- Load main application -->
+    <script src="script.js"></script>
+</body>
+</html>

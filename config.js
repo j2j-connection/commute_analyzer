@@ -1,13 +1,19 @@
 // Configuration file for API keys and settings
 const CONFIG = {
     // Google Maps API Key - You'll need to get this from Google Cloud Console
-    GOOGLE_MAPS_API_KEY: 'AIzaSyA5MER9NSNdWiVW59O0S83KthgN241ch1E',
+    // IMPORTANT: Replace with your actual API key for local development
+    // For production, use environment variables
+    GOOGLE_MAPS_API_KEY: 'YOUR_GOOGLE_MAPS_API_KEY_HERE',
     
     // OpenWeatherMap API Key - For real weather data
-    OPENWEATHER_API_KEY: '7b68e6a853bcf0f891c8acce16cf1c24',
+    // IMPORTANT: Replace with your actual API key for local development
+    // For production, use environment variables
+    OPENWEATHER_API_KEY: 'YOUR_OPENWEATHER_API_KEY_HERE',
     
     // MapBox API Key - For bike infrastructure data
-    MAPBOX_API_KEY: 'pk.eyJ1IjoiaGoyajIiLCJhIjoiY21jMnc2enJ2MGN3YjJyb2d2MGs2aHB1NyJ9.amKbtBa98D5CoIxGQDnM7AAPBOX_API_KEY_HERE',
+    // IMPORTANT: Replace with your actual API key for local development
+    // For production, use environment variables
+    MAPBOX_API_KEY: 'YOUR_MAPBOX_API_KEY_HERE',
     
     // API Endpoints
     GOOGLE_MAPS_BASE_URL: 'https://maps.googleapis.com/maps/api',

@@ -94,3 +94,4 @@ target/
 *.sqlite
 *.sqlite3 .env
 config.local.js
+config.js
